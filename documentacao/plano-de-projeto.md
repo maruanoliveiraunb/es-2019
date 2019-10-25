@@ -1,76 +1,86 @@
 # Plano de Projeto
 
+Template de Origem: OpenUp/Basic -> Work Products -> Project Management -> [Project Plan](http://ndpsoftware.com/OpenUpBasic/openup_basic/guidances/templates/resources/project_plan.dot)
+
 ## 1 - Introdução
-This plan covers the content and enablement portions of the EPF 1.0 project. A separate plan covers the tooling component.
+Este plano cobre o conteúdo e desenvolvimento geral do projeto proposto.
 
 ## 2 - Organização do Projeto
-See also: www.eclipse.org/epf/ 
-The work is divided into a number of content areas. Each content area is lead by a committer that is the content lead, working closely with a number of committers and contributors. The content lead is responsible for making sure that bugs and enhancement requests are triaged and assigned, and responsible for updating the project burndown (status) on a weekly basis. 
-We also have a content architect (Ricardo Balduino), who is responsible for the overall structure and integration of content from all content areas.
+See also: www.eclipse.org/epf/
+O trabalho está dividido em áreas de conhecimento. Com uma equipe reduzida, cada área de conhecimento terá a atuação de todos os integrantes, mas teremos a presença de um líder. É de responsabilidade do líder de cada área de conhecimento, além de colaborar com o trabalho na área, organizar e priorizar os trabalhos dos outros integrantes.
 
-The work is divided into the following content areas:
-* Project management: Chris Armstrong (lead), Jochen Krebs, Per Kroll
-• Requirements: Chris Sibbald (lead), Paul Bramble, Ana Paula Valente Pereira, Leonardo Medeiros, Kurt Sand, Bruce MacIsaac, Jim Ruehlin, Ricardo Balduino, and others.
-* Change management: Chris Sibbald (lead), Kurt Sand, and others.
-* Development: Brian Lyons (lead), Scott Ambler, Ricardo Balduino, and others.
-* Architecture: Mark Dickson (lead), Jim Ruehlin, Ana Pereira, Chris Doyle, and others.
-* Test: Brian Lyons (lead), Nate Oster, Jeff Smith, Dana Spears, and others.
-* General: Steve Adolph (lead), 
-* Developer outreach: Per Kroll / Naveena Bereny (leads), Ricardo Balduino, Scott Ambler, Kurt Sand, and others.
+O projeto está dividido nas seguintes áreas de conhecimento:
+
+* Gerenciamento de Projeto: Maruan (líder), Eduardo, Luan.
+* Requisitos: Eduardo (líder), Luan, Maruan
+* Desenvolvimento: Luan (líder), Eduardo, Maruan
+* Arquitetura: Luan (líder), Eduardo, Maruan
+* Testes: Eduardo (líder), Eduardo, Luan
+
 
 ## 3 - Medições
-The OpenUP component team will use OpenUP/Basic, adapted to address the fact that we are doing content development rather than coding. Key artifacts include: Project Plan (Word), Work Item List (Bugzilla + Excel), Iteration Plan (Word), and Status Assessment (Word).
 
-Progress is tracked using two primary measurements using a point system. It is estimated that 1 point represents 2h of work:
-* Project backlog: The project backlog shows progress relative to overall work to be done within the project.
-* Iteration backlog: The iteration backlog shows progress relative to work intended for the current iteration.
+O progresso do projeto será monitorado usando dois artefatos de acompanhamento (Backlog do projeto e Backlog de Iteração). Esses artefatos serão unidos à um sistema de pontuação (1 ponto equivale a 2 horas de trabalho), e para cada caso de uso precisará ser estimado uma pontuação.
 
-## 4 - Project Milestones and Objectives
+* Backlog do Projeto (): Apresenta um panorama geral do trabalho que está feito e o que ainda precisa ser realizado.
+* Backlog de Iteração: Apresenta um panorama dos trabalhos realizados e que ainda precisam ser feitos na iteração atual.
 
-This section covers objectives for the entire EPF 1.0 project.
-* Governance process in place, including guidelines for how to work with CVS 
-* Tutorials available to help people adopt EPF composer 
-* Process tools matured and usable to produce a broad set of processes and method content. 
-* Basic set of interfaces / APIs defined, stabilized, and delivered. 
-* Deliver basic printing capability.
-* Mature content. Deliver a mature OpenUP, and beta quality of one or more other processes, whereof one should be another agile process. 
-* Generate a high level of interest around EPF v1.0. Press releases, papers, tutorials, workshops, presentations, etc. 
-* Identify a broader set of process champions with an interest to contribute to EPF within a specific domain, such as MDA or project management, or a specific vertical such as telecom.
+## 4 - Marcos Históricos do Projeto e Objetivos
+
+Esta seção é reservada para apresentar os objetivos do projeto inteiro.
+
+* Levantar os requisitos do projeto baseados em concorrentes já existentes e de relevância no mercado 
+* Criar documentação base para o gerenciamento e desenvolvimento do projeto
+* Criar testes de aceitação de cada caso de uso, para permitir que em uma futura fase de implementação seja mais objetivo o desenvolvimento do aplicativo.
 
 <table>
     <tr>
         <th>Fase</th>
         <th>Iter.</th>
-        <th>Objetivos e Riscos</th>
+        <th>Objetivos</th>
         <th>Datas</th>
         <th>Estimativa</th>
     </tr>
     <tr>
-        <td>Inception / Warm-up</td>
-        <td>M0</td>
-        <td>Project acceptance and provisioning. IBM donation. Project environment established.Committer meeting. Project organization and plan agreed to.</td>
-        <td>23/12/2019</br>24/12/2019</td>
-        <td>12 dias</td>
+        <td>Início</td>
+        <td>01</td>
+        <td>T01 - Definir principais marcos e objetivos do projeto</td>
+        <td>10/10/2019</br>28/10/2019</td>
+        <td>18 dias</td>
     </tr>
     <tr>
-        <td>Inception / Warm-up</td>
-        <td>M0</td>
-        <td>Project acceptance and provisioning. IBM donation. Project environment established.Committer meeting. Project organization and plan agreed to.</td>
-        <td>23/12/2019</br>24/12/2019</td>
-        <td>12 dias</td>
+        <td>Início</td>
+        <td>01</td>
+        <td>T02 - Levantar requisitos gerais do projeto</td>
+        <td>10/10/2019</br>28/10/2019</td>
+        <td>18 dias</td>
     </tr>
     <tr>
-        <td>Inception / Warm-up</td>
-        <td>M0</td>
-        <td>Project acceptance and provisioning. IBM donation. Project environment established.Committer meeting. Project organization and plan agreed to.</td>
-        <td>23/12/2019</br>24/12/2019</td>
-        <td>12 dias</td>
+        <td>Elaboração</td>
+        <td>01</td>
+        <td>T03 - Desenvolver principais casos de uso</td>
+        <td>21/10/2019</br>04/11/2019</td>
+        <td>14 dias</td>
     </tr>
     <tr>
-        <td>Inception / Warm-up</td>
-        <td>M0</td>
-        <td>Project acceptance and provisioning. IBM donation. Project environment established.Committer meeting. Project organization and plan agreed to.</td>
-        <td>23/12/2019</br>24/12/2019</td>
-        <td>12 dias</td>
+        <td>Elaboração</td>
+        <td>01</td>
+        <td>T04 - Desenvolver protótipos relevantes</td>
+        <td>28/11/2019</br>04/11/2019</td>
+        <td>7 dias</td>
+    </tr>
+    <tr>
+        <td>Elaboração</td>
+        <td>01</td>
+        <td>T05 - Desenvolver arquitetura base do projeto</td>
+        <td>04/11/2019</br>18/11/2019</td>
+        <td>14 dias</td>
+    </tr>
+    <tr>
+        <td>Elaboração</td>
+        <td>01</td>
+        <td>T06 - Desenvolver testes dos principais casos de uso para validação do processo</td>
+        <td>04/11/2019</br>18/11/2019</td>
+        <td>14 dias</td>
     </tr>
 </table>

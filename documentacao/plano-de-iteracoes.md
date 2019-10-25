@@ -1,25 +1,79 @@
 # Plano de Iteração
 
-## 1 - Key Milestones
+Template de Origem: OpenUp/Basic -> Work Products -> Project Management -> [Iteration Plan](http://ndpsoftware.com/OpenUpBasic/openup_basic/guidances/templates/resources/iteration_plan.dot)
+
+## 1 - Principais Marcos Históricos
+
 <table>
     <tr>
-        <th>Milestone</th>
+        <th>Marcos históricos</th>
         <th>Data</th>
     </tr>
     <tr>
         <td>Início da Iteração</td>
+        <td>10/10/2019</td>
+    </tr>
+    <tr>
+        <td>Entrega da documentação principal de gerenciamento</td>
+        <td>28/10/2019</td>
+    </tr>
+    <tr>
+        <td>Entrega dos principais casos de uso</td>
+        <td>04/11/2019</td>
+    </tr>
+    <tr>
         <td>Prévias da Documentação</td>
-        <td>Fim da Iteração</td>
+        <td>28/10/2019</td>
+    </tr>
+    <tr>
+        <td>Entrega da estrutura base da arquitetura</td>
+        <td>11/11/2019</td>
+    </tr>
+    <tr>
+        <td>Fim da Iteração e Apresentação do Projeto</td>
+        <td>18/11/2019</td>
     </tr>
 </table>
 
 ## 2 - Objetivos de Alto Nível
-* Address usability issues raised by the Order Management department.
-* Deliver key scenarios showcasing meaningful integration with SAP.
-* Enable early adopters to download and install new builds without requiring constant handholding by the development team
-* Deliver a technical demo at EXPOWEST
 
-## 3 - Work Item Assignments
+* Levantar os requisitos gerais da iteração
+* Entregar documentação para o gerenciamento do projeto
+* Entregar documentação para o desenvolvimento do projeto
+* Entregar arquitetura base do projeto
+
+## 3 - Atribuição dos Itens de Trabalho
+
+
+
+<tr>
+        <td>Início</td>
+        <td>01</td>
+        <td>Descobrir concorrentes e realizar lista de funcionalidades existentes.</td>
+        <td>11/10/2019</br>21/10/2019</td>
+        <td>10 dias</td>
+    </tr>
+
+
+
+    <tr>
+        <td>Início</td>
+        <td>01</td>
+        <td>Organizar a documentação do GitHub inserindo templates e documentos que já estiverem pela equipe.</td>
+        <td>21/10/2019</br>28/10/2019</td>
+        <td>7 dias</td>
+    </tr>
+
+
+
+<tr>
+        <td>Início</td>
+        <td>01</td>
+        <td>T01 - Definir principais marcos e objetivos do projeto</td>
+        <td>10/10/2019</br>28/10/2019</td>
+        <td>18 dias</td>
+    </tr>
+
 <table>
     <tr>
         <th>Nome / Descrição</th>
@@ -29,45 +83,72 @@
         <th>Tempo Estimado</th>
     </tr>
     <tr>
-        <td>Support simple inventory control</td>
-        <td>2</td>
-        <td>8</td>
+        <td>T01 (1.1) - Criar principais artefatos de documentação para gerenciamento do projeto</td>
+        <td>1</td>
+        <td>10</td>
         <td>Eduardo, Luan, Maruan</td>
-        <td>12</td>
+        <td>20</td>
     </tr>
     <tr>
-        <td>Support simple inventory control</td>
-        <td>2</td>
-        <td>8</td>
+        <td>T02 (2.1) - Levantar principais requisitos do projeto</td>
+        <td>1</td>
+        <td>20</td>
         <td>Eduardo, Luan, Maruan</td>
-        <td>12</td>
+        <td>40</td>
     </tr>
     <tr>
-        <td>Support simple inventory control</td>
+        <td>T02 (2.1) - Análise de aplicativos concorrentes</td>
         <td>2</td>
-        <td>8</td>
+        <td>4</td>
         <td>Eduardo, Luan, Maruan</td>
-        <td>12</td>
+        <td>8</td>
+    </tr>   
+    <tr>
+        <td>T03 (3.1) - Criar casos de uso das principais funcionalidades</td>
+        <td>1</td>
+        <td>20</td>
+        <td>Eduardo, Luan, Maruan</td>
+        <td>40</td>
     </tr>
     <tr>
-        <td>Support simple inventory control</td>
-        <td>2</td>
-        <td>8</td>
+        <td>T04 (4.1) - Levantar a necessidade de realização de protótipos</td>
+        <td>1</td>
+        <td>4</td>
         <td>Eduardo, Luan, Maruan</td>
-        <td>12</td>
+        <td>8</td>
     </tr>
     <tr>
-        <td>Support simple inventory control</td>
-        <td>2</td>
-        <td>8</td>
+        <td>T04 (4.2) - Desenvolver protótipos relevantes</td>
+        <td>1</td>
+        <td>10</td>
         <td>Eduardo, Luan, Maruan</td>
-        <td>12</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>T05 (5.1) - Definir padrão de arquiterutura de desenvolvimento a ser adotado</td>
+        <td>1</td>
+        <td>4</td>
+        <td>Eduardo, Luan, Maruan</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>T05 (5.2) - Implementar arquitetura base do projeto</td>
+        <td>1</td>
+        <td>25</td>
+        <td>Eduardo, Luan, Maruan</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>T06 (5.3) - Implementar testes dos principais casos de uso</td>
+        <td>1</td>
+        <td>20</td>
+        <td>Eduardo, Luan, Maruan</td>
+        <td>40</td>
     </tr>
 </table>
 
 ## 4 - Critério de Avaliação
-* 97% of system-level test cases passed.
-* Scenarios for Simple inventory control properly tested and demoed to key stakeholders
-* End user documentation get favorable acceptance by end users
-* Walkthrough of iteration build with Order Management and Financial Services departments are well received.
-* Favorable response to technical demo at Supply Chain 2007 Conference.
+* Cada caso de uso precisa ter pelo menos um teste associado
+* Arquitetura criada precisa permitir um crescimento evolutivo do projeto
+* Artefatos de documentação gerados precisam ter uma versão .md e uma versão pdf
+* Projeto precisa gerar um build funcional do aplicativo para apresentar estrutura básica
