@@ -44,28 +44,6 @@ Template de Origem: OpenUp/Basic -> Work Products -> Project Management -> [Iter
 
 ## 3 - Atribuição dos Itens de Trabalho
 
-
-
-<tr>
-        <td>Início</td>
-        <td>01</td>
-        <td>Descobrir concorrentes e realizar lista de funcionalidades existentes.</td>
-        <td>11/10/2019</br>21/10/2019</td>
-        <td>10 dias</td>
-    </tr>
-
-
-
-    <tr>
-        <td>Início</td>
-        <td>01</td>
-        <td>Organizar a documentação do GitHub inserindo templates e documentos que já estiverem pela equipe.</td>
-        <td>21/10/2019</br>28/10/2019</td>
-        <td>7 dias</td>
-    </tr>
-
-
-
 <tr>
         <td>Início</td>
         <td>01</td>
