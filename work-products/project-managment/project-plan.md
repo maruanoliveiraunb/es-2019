@@ -42,14 +42,14 @@ Esta seção é reservada para apresentar os objetivos do projeto inteiro.
         <th>Estimativa</th>
     </tr>
     <tr>
-        <td>Início</td>
+        <td>Concepção</td>
         <td>01</td>
         <td>T01 - Definir principais marcos e objetivos do projeto</td>
         <td>10/10/2019</br>28/10/2019</td>
         <td>18 dias</td>
     </tr>
     <tr>
-        <td>Início</td>
+        <td>Concepção</td>
         <td>01</td>
         <td>T02 - Levantar requisitos gerais do projeto</td>
         <td>10/10/2019</br>28/10/2019</td>
