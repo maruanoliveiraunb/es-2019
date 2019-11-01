@@ -84,3 +84,8 @@ Esta seção é reservada para apresentar os objetivos do projeto inteiro.
         <td>14 dias</td>
     </tr>
 </table>
+
+
+## 5 - Lições aprendidas
+
+As principais lições aprendidas durante a elaboração do projetos serão descritas, com destaque em ações a serem tomadas para melhorar, por exemplo: o ambiente de desenvolvimento, o processo ou a colaboração da equipe.
