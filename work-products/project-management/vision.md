@@ -19,8 +19,7 @@ Esta introdução fornece uma visão geral de todo o documento de visão. Ela in
 ### 2.1 - Instrução do Problema
 
 [Resume o problema que este projeto resolve. Use as seguintes instruções como um modelo, fornecendo detalhes do projeto para substituir os elementos entre parênteses:
-
-O problema de (descreva o problema) afeta (as partes interessadas afetadas pelo problema). O impacto do problema é (qual é o impacto do problema). Uma solução bem sucedida incluiria (lista alguns principais benefícios de uma solução bem sucedida).
+O problema de transporte afeta diversas pessoas nas cidades brasileiras. (as partes interessadas afetadas pelo problema). O impacto do problema é enorme, uma vez que as pessoas não podem se locomover entre os municípios brasileiros de forma adequada  (qual é o impacto do problema). Uma solução bem sucedida incluiria o desenvolvimento de um aplicativo de caronas para minimizar o impacto que a falta do transporte público eficiente causa nos usuários. (lista alguns principais benefícios de uma solução bem sucedida).
 
 <table>
     <tr>
