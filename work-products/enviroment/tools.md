@@ -5,6 +5,7 @@ Abaixo listamos as ferramentas utilizadas no projeto
 # Documentação
 * VSCode (desenvolvimento da documentação - arquivos .md)
 * PlantUML (plugin para VSCode para criar diagramas via código)
+* WebStorm (deseennvolvimento da documentação - arquivos .md)
 
 ## Desenvolvimento
 

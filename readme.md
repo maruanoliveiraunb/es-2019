@@ -6,6 +6,8 @@
 
 **Integrantes do Grupo:** Eduardo Lafetá, Luan Freitas, Maruan Oliveira
 
+# Aplicativo de Caronas Compartilhadas (A2C)
+
 ## 1 - Introdução
 
 Projeto de Engenharia de Software para o desenvolvimento de um aplicativo de caronas compartilhadas.
