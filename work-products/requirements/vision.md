@@ -133,6 +133,7 @@ Também é estritamente necessário a presença de internet nos dispositivos mó
 
 Concorrente direto com diversas funcionalidades similares. (Fazer SWOT)
 Mas apesar disso, como a empresa é estrangeira e sua base de usuários ainda é pequena, eles não possuem uma forma segura de realizar pagamentos.
+Outro problema do Blablacar é a sua verificação de segurança do perfil de cada usuário do sistema. Essa verificação é baseada apenas no perfil do facebook do usuário. Que, mesmo com histórico dentro da plataforma, esse histórico pode ser montado com o tempo pelo próprio usuário mal-intencionado.
 
 ## 5 - Outros Requisitos do Produto
 

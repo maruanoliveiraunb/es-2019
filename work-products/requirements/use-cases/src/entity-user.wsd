@@ -1,0 +1,8 @@
+@startuml Entidade Usuário
+left to right direction
+actor usuario
+
+usuario -- (Criar/Editar/Deletar usuário)
+usuario -- (Realizar Login)
+usuario -- (Recuperar senha)
+@enduml

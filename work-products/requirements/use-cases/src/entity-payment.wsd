@@ -1,0 +1,11 @@
+@startuml Entidade Usuário
+left to right direction
+actor motorista
+actor passageiro
+
+passageiro -- (Criar/Editar/Deletar método de pagamento)
+passageiro -- (Realizar Pagamento)
+passageiro -- (Consultar Transações)
+
+(Consultar Transações) -- motorista
+@enduml

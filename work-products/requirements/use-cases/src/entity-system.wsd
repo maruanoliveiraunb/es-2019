@@ -1,0 +1,7 @@
+@startuml Entidade Sistema
+left to right direction
+actor sistema
+
+sistema -- (Verificar usuario)
+sistema -- (Bloquear usuario)
+@enduml
