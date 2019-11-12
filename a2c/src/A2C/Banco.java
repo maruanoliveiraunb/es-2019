@@ -1,95 +1,170 @@
 package A2C;
 
-import java.io.File;
-import java.io.IOException;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.util.ArrayList;
+import java.util.UUID;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
+import Modelos.Esquecimento;
 
-import org.w3c.dom.Attr;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.xml.sax.SAXException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import Modelos.Usuario;
 
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-
-import org.w3c.dom.Node;
-import java.io.*; 
 
 
 public class Banco {
 
-	public String local_usuarios = "users.xml";
-	public String local_esquecimentos = "forgets.xml";
-	public String local_verificador = "verifications.xml";
+	public ArrayList<Usuario> Usuarios = new ArrayList();
+	public ArrayList<Esquecimento> Esquecimentos = new ArrayList();
 
-	public void iniciar() throws ParserConfigurationException, TransformerException {
-		
 	
+	public Resposta usuario_criar(String nome,String senha ) {
 		
-		  Files.exists(local_usuarios);     //true
-
-
-        DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
-
-        DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
-
-        Document document = documentBuilder.newDocument();
-
-        // root element
-        Element root = document.createElement("users");
-        document.appendChild(root);
+		Resposta ret = new Resposta(false,"Usuario nao cadastrado !!");
 		
-        DOMSource domSource = new DOMSource(document);
-        StreamResult streamResult = new StreamResult(new File(local_usuarios));
-        
-        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        Transformer transformer = transformerFactory.newTransformer();
-        transformer.transform(domSource, streamResult);
-        
+		if(nome.length()<5) {
+			return new Resposta(false,"Nome de usuário invalido !!");
+		}
+		
+		
+		Usuario Novo = new Usuario();
+		Novo.setUsuario(nome);
+		Novo.setSenha(senha);
+		Usuarios.add(Novo);
+		
+		return new Resposta(true,"Usuario cadastrado com sucesso ");
 	}
 	
-	public void usuario_criar(String nome ) throws ParserConfigurationException, SAXException, IOException, TransformerException {
+	
+public Resposta usuario_login(String nome,String senha ) {
 		
-		File fXmlFile = new File(local_usuarios);
-		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		Document doc = dBuilder.parse(fXmlFile);
-	 
-		doc.getDocumentElement().normalize();
-	 
-		  Element n = doc.createElement("Usuario");
-
-	        //set id attribute
-	        n.setAttribute("id", "0");
-
-	   
-	        n.appendChild(elemento(doc, n, "nome", nome));
-
-	   
-	        
+		Resposta ret;
 		
-		 DOMSource domSource = new DOMSource(doc);
-	        StreamResult streamResult = new StreamResult(new File(local_usuarios));
-	        
-	        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-	        Transformer transformer = transformerFactory.newTransformer();
-	        transformer.transform(domSource, streamResult);
+		boolean encontrado = false;
+		
+		for (Usuario usuarioC: Usuarios) {
+		   
+		    if (usuarioC.getUsuario().equals(nome)){
+		    	encontrado = true;
+		    	break;
+		    }
+		}
+		
+		if (encontrado == false){
+			ret =new Resposta(false,"Usuario nao encontrado !!");	
+		} else {
+			ret= new Resposta(true,"Usuario encontrado !!");	
+		}
+		
+		return ret;
+		
 	}
 	
-	private static Node elemento(Document doc, Element element, String name, String value) {
-        Element node = doc.createElement(name);
-        node.appendChild(doc.createTextNode(value));
-        return node;
-    }
+
+
+
+public Resposta usuario_esquecimento(String usuariovalor ) {
+		
+		Resposta ret;
+		
+		boolean encontrado = false;
+		
+		for (Usuario usuarioC: Usuarios) {
+		   
+		    if (usuarioC.getUsuario().equals(usuariovalor)){
+		    	encontrado = true;
+		    	break;
+		    }
+		}
+		
+		if (encontrado == false){
+			ret =new Resposta(false,"Usuario nao encontrado !!");	
+		} else {
+			
+			
+
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		Date date = new Date(1,1,1);
+		String datacorrente =  dateFormat.format(date);
+
+
+		UUID uuid = UUID.randomUUID();
+        String resgate = uuid.toString();
+        resgate = resgate.toUpperCase();
+        resgate = resgate.substring(25);
+        
+        for (Esquecimento esquecimentoC: Esquecimentos) {
+			   
+		    if (esquecimentoC.getUsuario().equals(usuariovalor)){
+if (esquecimentoC.getStatus().equals("Esperando")){
+	esquecimentoC.setStatus("Expirou");
+}
+		    }
+		}
+        
+        
+			Esquecimentos.add(new Esquecimento(usuariovalor,resgate,"Esperando",datacorrente));
+			
+
+			
+			ret= new Resposta(true,"CODIGO DE RESGATE : " + resgate);	
+		}
+		
+		return ret;
+		
+	}
 	
+
+public Resposta usuario_resgatar(String usuariovalor,String resgatevalor ) {
+	
+	Resposta ret =new Resposta(false,"Usuario nao encontrado !!");	
+	
+	boolean encontrado = false;
+	
+	for (Usuario usuarioC: Usuarios) {
+	   
+	    if (usuarioC.getUsuario().equals(usuariovalor)){
+	    	encontrado = true;
+	    	break;
+	    }
+	}
+	
+
+	if (encontrado == false){
+		ret =new Resposta(false,"Usuario nao encontrado !!");	
+	} else {
+		
+		encontrado = false;
+		
+		for (Esquecimento esquecimentoC: Esquecimentos) {
+			   
+		    if (esquecimentoC.getUsuario().equals(usuariovalor)){
+		    	if (esquecimentoC.getStatus().equals("Esperando")) {
+		    		encontrado = true;
+		    		
+		    		if (esquecimentoC.getResgate().equals(resgatevalor) ){
+		    			esquecimentoC.setStatus("Concluido");
+		    			
+		    			ret= new Resposta(true,"Resgatado !!");	
+		    			
+		    		} else {
+		    			ret= new Resposta(false,"Resgate incorreto !!");	
+		    		}
+		    		
+			    	break;
+		    	}
+		    	
+		    }
+		}
+		
+	
+	}
+	return ret;
+	
+	
+}
 
 }
+
+
