@@ -1,27 +1,20 @@
 package A2C;
 
-import java.io.IOException;
 import java.util.Scanner;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
 
-import org.xml.sax.SAXException;
 
 public class MenuGeral {
 
-	
 	private Banco BancoC;
-	
-	
-	public MenuGeral(Banco BancoCorrente	) {
+	public boolean Executando = true;
+
+	public MenuGeral(Banco BancoCorrente) {
 		BancoC = BancoCorrente;
 
 	}
-	
-	
-	public void Inicio(			)  {
 
+	public void Inicio() {
 
 		System.out.println(" -------------- ---------- " + "A2C" + " ---------- -----------------");
 
@@ -34,7 +27,10 @@ public class MenuGeral {
 		System.out.printf(" - uc  : Criar novo Usuario \n");
 		System.out.printf(" - ul  : Login \n");
 		System.out.printf(" - ue  : Esqueci a senha \n");
-		System.out.printf(" - uv  : Verificar conta \n");
+		System.out.printf(" - ur  : Resgatar conta \n");
+
+		System.out.printf("\n");
+		System.out.printf(" - s  : Sair \n");
 		System.out.printf("\n");
 
 		System.out.printf("Opcao : ");
@@ -52,6 +48,18 @@ public class MenuGeral {
 			break;
 		case "ue":
 			usuario_esquecimento();
+			break;
+		case "ur":
+			usuario_resgatar();
+			break;
+		case "s":
+			Executando = false;
+			
+			System.out.printf("\n");
+
+			System.out.printf("Saindo .... \n");
+
+			
 			break;
 		default:
 			System.out.println("OPCAO DESCONHECIDA !!! \n");
@@ -74,19 +82,19 @@ public class MenuGeral {
 		System.out.printf(" Confirmar : ");
 		Scanner sc3 = new Scanner(System.in);
 		String senhac = sc3.nextLine();
-		
-		if (senha.equals(senhac)){
-				
-			Resposta r = BancoC.usuario_criar(usuario,senha);
-		
+
+		if (senha.equals(senhac)) {
+
+			Resposta r = BancoC.usuario_criar(usuario, senha);
+
 			System.out.println("    -  " + r.getFrase());
 
-		}else {
+		} else {
 			System.out.println("    - Senha nao confere !!! ");
 		}
-		
-		
+
 	}
+
 	public void usuario_login() {
 		System.out.printf("\n\n ----------- LOGIN ----------------\n\n ");
 
@@ -98,19 +106,26 @@ public class MenuGeral {
 		Scanner sc2 = new Scanner(System.in);
 		String senha = sc2.nextLine();
 
-		
-		Resposta r = BancoC.usuario_login(usuario,senha);
-		if (r.getStatus()==true) {
+		Resposta r = BancoC.usuario_login(usuario, senha);
+		if (r.getStatus() == true) {
+
+			int tmpid = Integer.parseInt(r.getFrase());
+			
+			MenuUsuario mg = new MenuUsuario(BancoC,tmpid);
+
+			while (mg.Executando == true) {
+
+				mg.Inicio();
+
+			}
 			
 			
-		} else {	
+		} else {
 			System.out.println("    -  " + r.getFrase());
 		}
-		
-		
-		
+
 	}
-	
+
 	public void usuario_esquecimento() {
 		System.out.printf("\n\n ----------- ESQUECI A SENHA ----------------\n\n ");
 
@@ -118,23 +133,19 @@ public class MenuGeral {
 		Scanner sc = new Scanner(System.in);
 		String usuario = sc.nextLine();
 
-		
 		Resposta r = BancoC.usuario_esquecimento(usuario);
-		if (r.getStatus()==true) {
-			
+		if (r.getStatus() == true) {
+
 			System.out.println("    -  " + r.getFrase());
 
-		} else {	
+		} else {
 			System.out.println("    -  " + r.getFrase());
 		}
-		
-		
-		
+
 	}
-	
-	
-	public void usuario_verificar() {
-		System.out.printf("\n\n ----------- VERIFICADOR ----------------\n\n ");
+
+	public void usuario_resgatar() {
+		System.out.printf("\n\n ----------- RESGATAR ----------------\n\n ");
 
 		System.out.printf("Usuario : ");
 		Scanner sc = new Scanner(System.in);
@@ -144,20 +155,15 @@ public class MenuGeral {
 		Scanner sc2 = new Scanner(System.in);
 		String resgate = sc2.nextLine();
 
-		
-		Resposta r = BancoC.usuario_resgatar(usuario,resgate);
-		if (r.getStatus()==true) {
-			
+		Resposta r = BancoC.usuario_resgatar(usuario, resgate);
+		if (r.getStatus() == true) {
+
 			System.out.println("    - " + r.getFrase());
 
-			
-			
-		} else {	
+		} else {
 			System.out.println("    -  " + r.getFrase());
 		}
-		
-		
-		
+
 	}
-	
+
 }
