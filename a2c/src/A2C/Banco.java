@@ -253,5 +253,47 @@ public class Banco {
 		return subcaronas;
 	}
 	
+
+	public Resposta caronas_excluir(int usuarioid, int cid) {
+
+		for (Carona CaronaC : Caronas) {
+			
+			if (CaronaC.getCID() == cid) {
+				
+				if (CaronaC.getUsuarioID()==usuarioid) {
+					Caronas.remove(CaronaC);
+					return new Resposta(true, "Carona excluida com sucesso ");
+				}
+				else {
+					return new Resposta(false, "Acesso nao autorizado");
+				}
+				
+			}
+		}
+		
+		
+		return new Resposta(false, "Acesso nao autorizado");
+
+	}
+	
+	
+	public ArrayList<Carona>  caronas_procurar(int usuarioid,String destino) {
+
+		 ArrayList<Carona> subcaronas = new ArrayList();
+
+			for (Carona CaronaC : Caronas) {
+				if (CaronaC.getUsuarioID() == usuarioid) {
+					
+				} else {
+					
+					if (CaronaC.getDestino().contentEquals(destino)) {
+						subcaronas.add(CaronaC);
+					}
+				}
+			}
+			
+			return subcaronas;
+		}
+	
 	
 }

@@ -55,6 +55,15 @@ private int uid=0;
 		case "lcc":
 			listar_caronas();
 			break;
+		case "ecc":
+			excluir_carona();
+			break;
+			
+			
+		case "pc":
+			procurar_carona();
+			break;
+			
 		case "s":
 			Executando = false;
 			break;
@@ -122,6 +131,53 @@ private int uid=0;
 
 	}
 	
+
+	public void excluir_carona() {
+		System.out.printf("\n\n ----------- EXCLUIR CARONA COMPARTILHADA ----------------\n\n");
+	
+	
+		System.out.printf("CID : ");
+		Scanner sc = new Scanner(System.in);
+		int cid = sc.nextInt();
+		
+		
+		Resposta r = BancoC.caronas_excluir(uid,cid);
+		
+		System.out.println("    -  " + r.getFrase());
+
+	}
+	
+	
+	public void procurar_carona() {
+		System.out.printf("\n\n ----------- PROCURAR CARONA ----------------\n\n");
+	
+	
+		System.out.printf("Destino : ");
+		Scanner sc = new Scanner(System.in);
+		String destino = sc.nextLine();
+		
+		
+
+		if (BancoC.caronas_procurar(uid,destino).size()==0){
+			
+			System.out.println("\n    - Nenhuma carona compartilhada cadastrada  !!!\n");
+
+			
+		}else {
+			
+			for (Carona CaronaC : BancoC.caronas_procurar(uid,destino)) {
+				
+				System.out.printf("\n    -  %d : - %s as %s com %d vagas ",CaronaC.getCID(),CaronaC.getDestino(),CaronaC.getHorario(),CaronaC.getVagas());
+
+			}
+			
+			System.out.println("");
+			System.out.println("");
+			
+		}
+		
+
+	}
 	
 }
 
