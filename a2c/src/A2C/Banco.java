@@ -22,6 +22,7 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 
 import org.w3c.dom.Node;
+import java.io.*; 
 
 
 public class Banco {
@@ -32,7 +33,10 @@ public class Banco {
 
 	public void iniciar() throws ParserConfigurationException, TransformerException {
 		
+	
 		
+		  Files.exists(local_usuarios);     //true
+
 
         DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
 
