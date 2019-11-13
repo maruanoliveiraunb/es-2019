@@ -5,6 +5,7 @@ public class Carona {
 	private int cid = 0;
 	private int usuarioid = 0;
 	private String horario = "";
+	private String origem = "";
 	private String destino = "";
 	private String modelo = "";
 
@@ -32,6 +33,14 @@ public class Carona {
 
 	public String getHorario() {
 		return this.horario;
+	}
+
+	public void setOrigem(String valor) {
+		this.origem = valor;
+	}
+
+	public String getOrigem() {
+		return this.origem;
 	}
 
 	public void setDestino(String valor) {

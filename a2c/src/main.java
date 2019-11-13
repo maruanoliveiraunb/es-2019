@@ -2,6 +2,7 @@
 import A2C.Banco;
 import A2C.MenuGeral;
 import SmokeTest.ST1;
+import SmokeTest.Smoker;
 
 public class main {
 
@@ -9,9 +10,8 @@ public class main {
 
 		Banco BancoC = new Banco();
 
-		ST1 SmokeTestCorrente = new ST1();
-
-		SmokeTestCorrente.Iniciar(BancoC);
+		Smoker SmokeTest = new Smoker();
+		SmokeTest.Iniciar(BancoC);
 
 		MenuGeral mg = new MenuGeral(BancoC);
 

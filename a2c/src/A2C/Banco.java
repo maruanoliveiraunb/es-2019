@@ -202,7 +202,8 @@ public class Banco {
 
 	}
 
-	public Resposta caronas_criar(int usuarioid, String destino, String horario, int vagas, String modelo) {
+	public Resposta caronas_criar(int usuarioid, String origem, String destino, String horario, int vagas,
+			String modelo) {
 
 		if (destino.length() < 3) {
 			return new Resposta(false, "Carona não cadastrada : Destino invalido ! ");
@@ -220,10 +221,15 @@ public class Banco {
 			return new Resposta(false, "Carona não cadastrada : Modelo invalido ! ");
 		}
 
+		if (origem.length() < 3) {
+			return new Resposta(false, "Carona não cadastrada : Origem invalida ! ");
+		}
+
 		Carona Novo = new Carona();
 
 		Novo.setCID(CID);
 		Novo.setUsuarioID(usuarioid);
+		Novo.setOrigem(origem);
 		Novo.setDestino(destino);
 		Novo.setHorario(horario);
 		Novo.setVagas(vagas);

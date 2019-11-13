@@ -45,6 +45,9 @@ public class MenuUsuario {
 		System.out.printf(" - rmp  : Remover Metodo de Pagamento \n");
 
 		System.out.printf("\n");
+		System.out.printf(" - pcc  : Pagar Carona Compartilhada\n");
+
+		System.out.printf("\n");
 		System.out.printf(" - s  : Sair \n");
 		System.out.printf("\n");
 
@@ -100,6 +103,10 @@ public class MenuUsuario {
 	public void carona_criar() {
 		System.out.printf("\n\n ----------- CRIAR CARONA COMPARTILHADA ----------------\n\n");
 
+		System.out.printf("Origem : ");
+		Scanner sc0 = new Scanner(System.in);
+		String origem = sc0.nextLine();
+
 		System.out.printf("Destino : ");
 		Scanner sc = new Scanner(System.in);
 		String destino = sc.nextLine();
@@ -116,7 +123,7 @@ public class MenuUsuario {
 		Scanner sc4 = new Scanner(System.in);
 		int vagas = sc4.nextInt();
 
-		Resposta r = BancoC.caronas_criar(uid, destino, horario, vagas, modelo);
+		Resposta r = BancoC.caronas_criar(uid, origem, destino, horario, vagas, modelo);
 
 		System.out.println("    -  " + r.getFrase());
 

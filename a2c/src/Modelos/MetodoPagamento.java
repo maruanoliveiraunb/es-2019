@@ -29,7 +29,7 @@ public class MetodoPagamento {
 	}
 
 	public String getMetodo() {
-		return this.metodo;
+		return this.metodo.toUpperCase();
 	}
 
 	public void setCartao(String valor) {
