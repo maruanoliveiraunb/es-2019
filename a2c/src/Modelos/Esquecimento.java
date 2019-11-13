@@ -1,6 +1,5 @@
 package Modelos;
 
-import java.sql.Date;
 
 public class Esquecimento {
 
@@ -34,4 +33,8 @@ public class Esquecimento {
 		return this.resgate;
 	}
 
+	public String getDDC() {
+		return this.ddc;
+	}
+	
 }

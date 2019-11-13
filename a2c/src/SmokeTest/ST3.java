@@ -1,7 +1,6 @@
 package SmokeTest;
 
 import A2C.Banco;
-import A2C.Resposta;
 
 public class ST3 {
 
@@ -20,6 +19,7 @@ public class ST3 {
 		System.out.println("    - MARUAN : " + BancoC.caronas_solicitar(MARUAN_ID, 0).getFrase());
 		System.out.println("    - MARUAN : " + BancoC.caronas_solicitar(MARUAN_ID, 1).getFrase());
 		System.out.println("    - MARUAN : " + BancoC.caronas_solicitar(MARUAN_ID, 2).getFrase());
+		System.out.println("    - LAFETA : " + BancoC.caronas_solicitar(LAFETA_ID, 2).getFrase());
 
 		System.out.println(" ---------------- ---------------- ---------------------------------");
 

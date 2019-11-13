@@ -63,6 +63,7 @@ public class MenuGeral {
 			break;
 		}
 
+		sc.close();
 	}
 
 	public void usuario_criar() {
@@ -90,6 +91,10 @@ public class MenuGeral {
 			System.out.println("    - Senha nao confere !!! ");
 		}
 
+		sc.close();
+		sc2.close();
+		sc3.close();
+		
 	}
 
 	public void usuario_login() {
@@ -120,6 +125,8 @@ public class MenuGeral {
 			System.out.println("    -  " + r.getFrase());
 		}
 
+		sc.close();
+		sc2.close();
 	}
 
 	public void usuario_esquecimento() {
@@ -138,6 +145,7 @@ public class MenuGeral {
 			System.out.println("    -  " + r.getFrase());
 		}
 
+		sc.close();
 	}
 
 	public void usuario_resgatar() {
@@ -160,6 +168,8 @@ public class MenuGeral {
 			System.out.println("    -  " + r.getFrase());
 		}
 
+		sc.close();
+		sc2.close();
 	}
 
 }

@@ -1,7 +1,6 @@
 package SmokeTest;
 
 import A2C.Banco;
-import A2C.Resposta;
 
 public class Smoker {
 

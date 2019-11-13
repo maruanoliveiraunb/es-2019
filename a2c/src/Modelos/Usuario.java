@@ -25,4 +25,9 @@ public class Usuario {
 	public String getUsuario() {
 		return this.usuario;
 	}
+	
+	public String getSenha() {
+		return this.senha;
+	}
+	
 }

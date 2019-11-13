@@ -10,17 +10,16 @@ import Modelos.Esquecimento;
 import Modelos.MetodoPagamento;
 import Modelos.Pedido;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import Modelos.Usuario;
 
 public class Banco {
 
-	public ArrayList<Usuario> Usuarios = new ArrayList();
-	public ArrayList<Esquecimento> Esquecimentos = new ArrayList();
-	public ArrayList<Carona> Caronas = new ArrayList();
-	public ArrayList<Pedido> Pedidos = new ArrayList();
-	public ArrayList<MetodoPagamento> MetodosDePagamentos = new ArrayList();
+	public ArrayList<Usuario> Usuarios = new ArrayList<Usuario>();
+	public ArrayList<Esquecimento> Esquecimentos = new ArrayList<Esquecimento>();
+	public ArrayList<Carona> Caronas = new ArrayList<Carona>();
+	public ArrayList<Pedido> Pedidos = new ArrayList<Pedido>();
+	public ArrayList<MetodoPagamento> MetodosDePagamentos = new ArrayList<MetodoPagamento>();
 
 	private int UID = 0;
 	private int CID = 0;
@@ -31,7 +30,6 @@ public class Banco {
 
 		usuariovalor = usuariovalor.toLowerCase();
 
-		Resposta ret = new Resposta(false, "Usuario nao cadastrado !!");
 
 		if (usuariovalor.length() < 5) {
 			return new Resposta(false, "Nome de usuário invalido !!");
@@ -127,8 +125,8 @@ public class Banco {
 		} else {
 
 			DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-			Date date = new Date(1, 1, 1);
-			String datacorrente = dateFormat.format(date);
+			@SuppressWarnings("deprecation")
+			String datacorrente = dateFormat.format(new Date(1, 1, 1));
 
 			UUID uuid = UUID.randomUUID();
 			String resgate = uuid.toString();
@@ -244,7 +242,7 @@ public class Banco {
 
 	public ArrayList<Carona> caronas_listar(int usuarioid) {
 
-		ArrayList<Carona> subcaronas = new ArrayList();
+		ArrayList<Carona> subcaronas = new ArrayList<Carona>();
 
 		for (Carona CaronaC : Caronas) {
 			if (CaronaC.getUsuarioID() == usuarioid) {
@@ -277,7 +275,7 @@ public class Banco {
 
 	public ArrayList<Carona> caronas_procurar(int usuarioid, String destino) {
 
-		ArrayList<Carona> subcaronas = new ArrayList();
+		ArrayList<Carona> subcaronas = new ArrayList<Carona>();
 
 		for (Carona CaronaC : Caronas) {
 			if (CaronaC.getUsuarioID() == usuarioid) {
@@ -347,7 +345,7 @@ public class Banco {
 
 	public ArrayList<Pedido> pedidos_listar(int usuarioid) {
 
-		ArrayList<Pedido> subpedidos = new ArrayList();
+		ArrayList<Pedido> subpedidos = new ArrayList<Pedido>();
 
 		for (Pedido PedidoC : Pedidos) {
 			if (PedidoC.getUsuarioID() == usuarioid) {
@@ -434,7 +432,7 @@ public class Banco {
 
 	public ArrayList<MetodoPagamento> metodoPagamento_listar(int usuarioid) {
 
-		ArrayList<MetodoPagamento> sublista = new ArrayList();
+		ArrayList<MetodoPagamento> sublista = new ArrayList<MetodoPagamento>();
 
 		for (MetodoPagamento MetodoPagamentoC : MetodosDePagamentos) {
 			if (MetodoPagamentoC.getUsuarioID() == usuarioid) {

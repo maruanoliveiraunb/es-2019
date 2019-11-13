@@ -1,12 +1,11 @@
 
 import A2C.Banco;
 import A2C.MenuGeral;
-import SmokeTest.ST1;
 import SmokeTest.Smoker;
 
 public class main {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args)  {
 
 		Banco BancoC = new Banco();
 
