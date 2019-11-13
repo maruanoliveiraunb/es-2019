@@ -2,8 +2,6 @@ package A2C;
 
 import java.util.Scanner;
 
-
-
 public class MenuGeral {
 
 	private Banco BancoC;
@@ -54,12 +52,11 @@ public class MenuGeral {
 			break;
 		case "s":
 			Executando = false;
-			
+
 			System.out.printf("\n");
 
 			System.out.printf("Saindo .... \n");
 
-			
 			break;
 		default:
 			System.out.println("OPCAO DESCONHECIDA !!! \n");
@@ -110,16 +107,15 @@ public class MenuGeral {
 		if (r.getStatus() == true) {
 
 			int tmpid = Integer.parseInt(r.getFrase());
-			
-			MenuUsuario mg = new MenuUsuario(BancoC,tmpid);
+
+			MenuUsuario mg = new MenuUsuario(BancoC, tmpid);
 
 			while (mg.Executando == true) {
 
 				mg.Inicio();
 
 			}
-			
-			
+
 		} else {
 			System.out.println("    -  " + r.getFrase());
 		}
