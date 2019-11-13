@@ -58,8 +58,14 @@ public class Banco {
 		for (Usuario usuarioC : Usuarios) {
 
 			if (usuarioC.getUsuario().equals(usuariovalor)) {
-				encontrado = true;
-				usuarioid = usuarioC.getID();
+				
+				if (usuarioC.getSenha().contentEquals(senha)) {
+					
+					encontrado = true;
+					usuarioid = usuarioC.getID();
+					
+				}
+				
 				break;
 			}
 		}
@@ -73,6 +79,38 @@ public class Banco {
 		return ret;
 
 	}
+	
+	public Resposta usuario_mudarsenha(String usuariovalor, String senha) {
+
+		usuariovalor = usuariovalor.toLowerCase();
+
+		Resposta ret;
+		int usuarioid = 0;
+
+		boolean encontrado = false;
+
+		for (Usuario usuarioC : Usuarios) {
+
+			if (usuarioC.getUsuario().equals(usuariovalor)) {
+				
+				usuarioC.setSenha(senha);
+				encontrado = true;
+				
+				
+				break;
+			}
+		}
+
+		if (encontrado == false) {
+			ret = new Resposta(false, "Usuario nao encontrado !!");
+		} else {
+			ret = new Resposta(false, "Usuario senha modificada !!");
+		}
+
+		return ret;
+
+	}
+	
 
 	public Usuario usuario_obterid(int id) {
 

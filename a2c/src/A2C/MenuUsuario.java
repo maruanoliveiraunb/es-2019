@@ -18,7 +18,7 @@ public class MenuUsuario {
 
 	}
 
-	public void Inicio() {
+	public void MostrarMenu() {
 
 		System.out.println(" -------------- ---------- " + "A2C - " + BancoC.usuario_obterid(uid).getUsuario()
 				+ " ---------- -----------------");
@@ -98,7 +98,6 @@ public class MenuUsuario {
 			break;
 		}
 
-		sc.close();
 	}
 
 	public void carona_criar() {
@@ -128,11 +127,6 @@ public class MenuUsuario {
 
 		System.out.println("    -  " + r.getFrase());
 
-		sc0.close();
-		sc.close();
-		sc2.close();
-		sc3.close();
-		sc4.close();
 	}
 
 	public void listar_caronas() {
@@ -196,7 +190,6 @@ public class MenuUsuario {
 			System.out.println("");
 
 		}
-		sc.close();
 
 	}
 
@@ -211,7 +204,6 @@ public class MenuUsuario {
 
 		System.out.println("    -  " + r.getFrase());
 
-		sc.close();
 	}
 
 	public void listar_pedidos() {
@@ -250,7 +242,6 @@ public class MenuUsuario {
 
 		System.out.println("    -  " + r.getFrase());
 
-		sc.close();
 	}
 
 	public void metodopagamento_criar() {
@@ -269,8 +260,7 @@ public class MenuUsuario {
 
 		System.out.println("    -  " + r.getFrase());
 
-		sc.close();
-		sc2.close();
+	
 	}
 
 	public void metodopagamento_excluir() {
@@ -284,7 +274,6 @@ public class MenuUsuario {
 
 		System.out.println("    -  " + r.getFrase());
 
-		sc.close();
 	}
 
 	public void metodopagamento_listar() {

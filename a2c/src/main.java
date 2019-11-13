@@ -12,11 +12,11 @@ public class main {
 		Smoker SmokeTest = new Smoker();
 		SmokeTest.Iniciar(BancoC);
 
-		MenuGeral mg = new MenuGeral(BancoC);
+		MenuGeral MenuGeralC = new MenuGeral(BancoC);
 
-		while (mg.Executando == true) {
+		while (MenuGeralC.Executando == true) {
 
-			mg.Inicio();
+			MenuGeralC.MostrarMenu();
 
 		}
 

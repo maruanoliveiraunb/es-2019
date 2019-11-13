@@ -12,7 +12,7 @@ public class MenuGeral {
 
 	}
 
-	public void Inicio() {
+	public void MostrarMenu() {
 
 		System.out.println(" -------------- ---------- " + "A2C" + " ---------- -----------------");
 
@@ -63,7 +63,7 @@ public class MenuGeral {
 			break;
 		}
 
-		sc.close();
+		
 	}
 
 	public void usuario_criar() {
@@ -91,10 +91,7 @@ public class MenuGeral {
 			System.out.println("    - Senha nao confere !!! ");
 		}
 
-		sc.close();
-		sc2.close();
-		sc3.close();
-		
+	
 	}
 
 	public void usuario_login() {
@@ -117,7 +114,7 @@ public class MenuGeral {
 
 			while (mg.Executando == true) {
 
-				mg.Inicio();
+				mg.MostrarMenu();
 
 			}
 
@@ -125,8 +122,7 @@ public class MenuGeral {
 			System.out.println("    -  " + r.getFrase());
 		}
 
-		sc.close();
-		sc2.close();
+	
 	}
 
 	public void usuario_esquecimento() {
@@ -145,7 +141,6 @@ public class MenuGeral {
 			System.out.println("    -  " + r.getFrase());
 		}
 
-		sc.close();
 	}
 
 	public void usuario_resgatar() {
@@ -162,14 +157,36 @@ public class MenuGeral {
 		Resposta r = BancoC.usuario_resgatar(usuario, resgate);
 		if (r.getStatus() == true) {
 
-			System.out.println("    - " + r.getFrase());
+			//System.out.println("    - " + r.getFrase());
+			
+			
+
+			System.out.printf(" Senha : ");
+			Scanner sc3 = new Scanner(System.in);
+			String senha = sc3.nextLine();
+
+			System.out.printf(" Confirmar : ");
+			Scanner sc4 = new Scanner(System.in);
+			String senhac = sc4.nextLine();
+
+			if (senha.equals(senhac)) {
+
+				Resposta r2 = BancoC.usuario_mudarsenha(usuario, senha);
+
+				System.out.println("    -  " + r2.getFrase());
+
+			} else {
+				System.out.println("    - Senha nao confere !!! ");
+			}
+
+			
+			
+			
 
 		} else {
 			System.out.println("    -  " + r.getFrase());
 		}
 
-		sc.close();
-		sc2.close();
 	}
 
 }
