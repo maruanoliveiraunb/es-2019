@@ -2,9 +2,11 @@ package Modelos;
 
 public class Usuario {
 
+	private int ID = 0;
+
 	private String usuario = "";
 	private String senha = "";
-	private int ID = 0;
+	private String email = "";
 
 	public int getID() {
 		return this.ID;
@@ -29,5 +31,16 @@ public class Usuario {
 	public String getSenha() {
 		return this.senha;
 	}
+	
+	
+	public void setEmail(String valor) {
+		this.email = valor;
+	}
+
+	public String getEmail() {
+		return this.email;
+	}
+	
+	
 	
 }

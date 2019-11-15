@@ -8,6 +8,7 @@ public class Carona {
 	private String origem = "";
 	private String destino = "";
 	private String modelo = "";
+	private float preco = (float) 0.0;
 
 	private int vagas = 0;
 
@@ -66,5 +67,14 @@ public class Carona {
 	public int getVagas() {
 		return this.vagas;
 	}
+	
+	public float getPreco() {
+		return this.preco;
+	}
+
+	public void setPreco(float valor) {
+		this.preco = valor;
+	}
+	
 
 }

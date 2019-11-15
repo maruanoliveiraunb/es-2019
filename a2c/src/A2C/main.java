@@ -1,6 +1,5 @@
+package A2C;
 
-import A2C.Banco;
-import A2C.MenuGeral;
 import SmokeTest.Smoker;
 
 public class main {

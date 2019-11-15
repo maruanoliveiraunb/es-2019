@@ -14,7 +14,7 @@ public class MenuGeral {
 
 	public void MostrarMenu() {
 
-		System.out.println(" -------------- ---------- " + "A2C" + " ---------- -----------------");
+		System.out.println(" ------------------------- ---------- " + "A2C" + " ---------- -------------------------");
 
 		System.out.printf("\n");
 		System.out.printf("\n");
@@ -67,23 +67,28 @@ public class MenuGeral {
 	}
 
 	public void usuario_criar() {
-		System.out.printf("\n\n ----------- CRIAR USUARIO ----------------\n\n ");
+		System.out.printf("\n\n ----------- CRIAR USUARIO ----------------\n\n");
 
 		System.out.printf("Usuario : ");
 		Scanner sc = new Scanner(System.in);
 		String usuario = sc.nextLine();
 
-		System.out.printf(" Senha : ");
+		System.out.printf("Email : ");
+		Scanner sc4 = new Scanner(System.in);
+		String email = sc4.nextLine();
+
+		
+		System.out.printf("Senha : ");
 		Scanner sc2 = new Scanner(System.in);
 		String senha = sc2.nextLine();
 
-		System.out.printf(" Confirmar : ");
+		System.out.printf("Confirmar : ");
 		Scanner sc3 = new Scanner(System.in);
 		String senhac = sc3.nextLine();
 
 		if (senha.equals(senhac)) {
 
-			Resposta r = BancoC.usuario_criar(usuario, senha);
+			Resposta r = BancoC.usuario_criar(usuario,email, senha);
 
 			System.out.println("    -  " + r.getFrase());
 

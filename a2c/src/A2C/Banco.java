@@ -8,6 +8,7 @@ import java.util.UUID;
 import Modelos.Carona;
 import Modelos.Esquecimento;
 import Modelos.MetodoPagamento;
+import Modelos.Pagamento;
 import Modelos.Pedido;
 
 import java.text.SimpleDateFormat;
@@ -20,13 +21,15 @@ public class Banco {
 	public ArrayList<Carona> Caronas = new ArrayList<Carona>();
 	public ArrayList<Pedido> Pedidos = new ArrayList<Pedido>();
 	public ArrayList<MetodoPagamento> MetodosDePagamentos = new ArrayList<MetodoPagamento>();
+	public ArrayList<Pagamento> Pagamentos = new ArrayList<Pagamento>();
 
 	private int UID = 0;
 	private int CID = 0;
 	private int PID = 0;
 	private int MPID = 0;
+	private int PAGID = 0;
 
-	public Resposta usuario_criar(String usuariovalor, String senha) {
+	public Resposta usuario_criar(String usuariovalor,String email, String senha) {
 
 		usuariovalor = usuariovalor.toLowerCase();
 
@@ -35,10 +38,47 @@ public class Banco {
 			return new Resposta(false, "Nome de usuário invalido !!");
 		}
 
+		if (usuariovalor.contains(" ") ==true) {
+			return new Resposta(false, "Nome de usuário invalido !!");
+		}
+		
+		if (email.length() < 5) {
+			return new Resposta(false, "Email invalido !!");
+		}
+
+		email=email.toLowerCase();
+		usuariovalor=usuariovalor.toLowerCase();
+		
+		for (Usuario usuarioC : Usuarios) {
+
+			if (usuarioC.getUsuario().equals(usuariovalor)) {
+				
+				if (usuarioC.getSenha().contentEquals(senha)) {
+				
+					return new Resposta(false, "Usuario já cadastrado !!");
+				}
+				
+				break;
+			}
+			
+			if (usuarioC.getEmail().equals(email)) {
+				
+				if (usuarioC.getEmail().contentEquals(email)) {
+				
+					return new Resposta(false, "Email já cadastrado !!");
+				}
+				
+				break;
+			}
+
+		}
+		
+		
 		Usuario Novo = new Usuario();
 		Novo.setID(UID);
 		Novo.setUsuario(usuariovalor);
 		Novo.setSenha(senha);
+		Novo.setEmail(email);
 		Usuarios.add(Novo);
 
 		UID += 1;
@@ -239,7 +279,7 @@ public class Banco {
 	}
 
 	public Resposta caronas_criar(int usuarioid, String origem, String destino, String horario, int vagas,
-			String modelo) {
+			String modelo,float preco) {
 
 		if (destino.length() < 3) {
 			return new Resposta(false, "Carona não cadastrada : Destino invalido ! ");
@@ -261,6 +301,22 @@ public class Banco {
 			return new Resposta(false, "Carona não cadastrada : Origem invalida ! ");
 		}
 
+		if (preco < 0) {
+			return new Resposta(false, "Carona não cadastrada : Preço invalido ! ");
+		}
+		
+		if (preco >5000) {
+			return new Resposta(false, "Carona não cadastrada : Preço invalido ! ");
+		}
+		
+		if (vagas < 0) {
+			return new Resposta(false, "Carona não cadastrada : Vagas invalida ! ");
+		}
+		
+		if (vagas > 4) {
+			return new Resposta(false, "Carona não cadastrada : Vagas invalida ! ");
+		}
+		
 		Carona Novo = new Carona();
 
 		Novo.setCID(CID);
@@ -270,7 +326,8 @@ public class Banco {
 		Novo.setHorario(horario);
 		Novo.setVagas(vagas);
 		Novo.setModelo(modelo);
-
+		Novo.setPreco(preco);
+		
 		Caronas.add(Novo);
 
 		CID += 1;
@@ -320,7 +377,7 @@ public class Banco {
 
 			} else {
 
-				if (CaronaC.getDestino().contentEquals(destino)) {
+				if (CaronaC.getDestino().contains(destino)) {
 					subcaronas.add(CaronaC);
 				}
 			}
@@ -502,5 +559,65 @@ public class Banco {
 		return new Resposta(false, "Acesso nao autorizado");
 
 	}
+	
+	
+	public Resposta pagamento(int usuarioid, int cid, int mpid) {
+
+		
+		boolean foipago = false;
+		
+	
+		for (MetodoPagamento MetodoPagamentoC : MetodosDePagamentos) {
+
+			if (MetodoPagamentoC.getMPID() == mpid) {
+
+				if (MetodoPagamentoC.getUsuarioID() == usuarioid) {
+					
+					
+					
+					for (Carona CaronaC : Caronas) {
+
+						if (CaronaC.getCID() == cid) {
+
+							if (CaronaC.getUsuarioID() == usuarioid) {
+							
+								Pagamento pc = new Pagamento();
+								pc.setPID(PAGID);
+								pc.setMPID(MetodoPagamentoC.getMPID());
+								pc.setValor(CaronaC.getPreco());
+								pc.setUsuarioID(usuarioid);
+
+								Pagamentos.add(pc);
+								
+								PAGID+=1;
+								foipago =true;
+								break;
+							} else {
+								
+							}
+
+						}
+					}
+
+					foipago=true;
+					break;
+					
+				} else {
+				
+				}
+
+			}
+		}
+		
+		if (foipago == false){
+			return new Resposta(false, "Pagamento não realizado !");
+		} else {
+			return new Resposta(true, "Pagamento realizado com sucesso ");
+		}
+
+		
+	}
+
+	
 
 }

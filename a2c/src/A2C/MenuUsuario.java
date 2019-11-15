@@ -90,6 +90,11 @@ public class MenuUsuario {
 		case "rmp":
 			metodopagamento_excluir();
 			break;
+			
+		case "pcc":
+			pagar();
+			break;
+			
 		case "s":
 			Executando = false;
 			break;
@@ -123,7 +128,12 @@ public class MenuUsuario {
 		Scanner sc4 = new Scanner(System.in);
 		int vagas = sc4.nextInt();
 
-		Resposta r = BancoC.caronas_criar(uid, origem, destino, horario, vagas, modelo);
+		System.out.printf("Preco : ");
+		Scanner sc5 = new Scanner(System.in);
+		float preco = sc5.nextFloat();
+
+		
+		Resposta r = BancoC.caronas_criar(uid, origem, destino, horario, vagas, modelo,preco);
 
 		System.out.println("    -  " + r.getFrase());
 
@@ -200,10 +210,15 @@ public class MenuUsuario {
 		Scanner sc = new Scanner(System.in);
 		int cid = sc.nextInt();
 
+		System.out.println("");
+		System.out.println("");
+		
 		Resposta r = BancoC.caronas_solicitar(uid, cid);
 
 		System.out.println("    -  " + r.getFrase());
 
+		System.out.println("");
+		System.out.println("");
 	}
 
 	public void listar_pedidos() {
@@ -298,4 +313,29 @@ public class MenuUsuario {
 		}
 
 	}
+	
+	public void pagar() {
+
+		System.out.printf("\n\n ----------- REALIZAR PAGAMENTO ----------------\n\n");
+
+		System.out.printf("Carona ID : ");
+		Scanner sc = new Scanner(System.in);
+		int cid = sc.nextInt();
+
+		System.out.printf("Metodo ID : ");
+		Scanner sc2 = new Scanner(System.in);
+		int mpid = sc2.nextInt();
+
+		System.out.println("");
+		System.out.println("");
+		
+		Resposta r = BancoC.pagamento(uid, cid, mpid);
+
+		System.out.println("    -  " + r.getFrase());
+
+		System.out.println("");
+		System.out.println("");
+	
+	}
+	
 }
