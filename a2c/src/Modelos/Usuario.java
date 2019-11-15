@@ -7,6 +7,7 @@ public class Usuario {
 	private String usuario = "";
 	private String senha = "";
 	private String email = "";
+	private String cpf = "";
 
 	public int getID() {
 		return this.ID;
@@ -41,6 +42,12 @@ public class Usuario {
 		return this.email;
 	}
 	
-	
+	public void setCPF(String valor) {
+		this.cpf = valor;
+	}
+
+	public String getCPF() {
+		return this.cpf;
+	}
 	
 }

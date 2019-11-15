@@ -132,11 +132,18 @@ public class MenuUsuario {
 		Scanner sc5 = new Scanner(System.in);
 		float preco = sc5.nextFloat();
 
+
+		System.out.println("");
+		System.out.println("");
 		
 		Resposta r = BancoC.caronas_criar(uid, origem, destino, horario, vagas, modelo,preco);
 
 		System.out.println("    -  " + r.getFrase());
 
+
+		System.out.println("");
+		System.out.println("");
+		
 	}
 
 	public void listar_caronas() {

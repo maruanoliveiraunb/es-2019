@@ -29,7 +29,7 @@ public class Banco {
 	private int MPID = 0;
 	private int PAGID = 0;
 
-	public Resposta usuario_criar(String usuariovalor,String email, String senha) {
+	public Resposta usuario_criar(String usuariovalor,String email,String cpf, String senha) {
 
 		usuariovalor = usuariovalor.toLowerCase();
 
@@ -48,6 +48,18 @@ public class Banco {
 
 		email=email.toLowerCase();
 		usuariovalor=usuariovalor.toLowerCase();
+		
+		
+		
+		if (cpf.length() < 10) {
+			return new Resposta(false, "CPF de usuário invalido !!");
+		}
+		
+		if (cpf.length() > 20) {
+			return new Resposta(false, "CPF de usuário invalido !!");
+		}
+		
+		
 		
 		for (Usuario usuarioC : Usuarios) {
 
@@ -71,6 +83,16 @@ public class Banco {
 				break;
 			}
 
+			if (usuarioC.getCPF().equals(cpf)) {
+				
+				if (usuarioC.getCPF().contentEquals(cpf)) {
+				
+					return new Resposta(false, "CPF já cadastrado !!");
+				}
+				
+				break;
+			}
+
 		}
 		
 		
@@ -79,6 +101,8 @@ public class Banco {
 		Novo.setUsuario(usuariovalor);
 		Novo.setSenha(senha);
 		Novo.setEmail(email);
+		Novo.setCPF(cpf);
+
 		Usuarios.add(Novo);
 
 		UID += 1;

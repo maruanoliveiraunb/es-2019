@@ -73,6 +73,11 @@ public class MenuGeral {
 		Scanner sc = new Scanner(System.in);
 		String usuario = sc.nextLine();
 
+		System.out.printf("CPF : ");
+		Scanner sc5 = new Scanner(System.in);
+		String cpf = sc5.nextLine();
+
+		
 		System.out.printf("Email : ");
 		Scanner sc4 = new Scanner(System.in);
 		String email = sc4.nextLine();
@@ -88,7 +93,7 @@ public class MenuGeral {
 
 		if (senha.equals(senhac)) {
 
-			Resposta r = BancoC.usuario_criar(usuario,email, senha);
+			Resposta r = BancoC.usuario_criar(usuario,email,cpf, senha);
 
 			System.out.println("    -  " + r.getFrase());
 
