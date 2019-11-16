@@ -4,7 +4,7 @@
 
 ### 1.1 - Propósito
 
-Este documento descreve o processo seguido por este projeto
+Este documento visa descrever o processo seguido por este projeto
 
 ### 1.2 Visão Geral do Processo
 
@@ -12,7 +12,7 @@ O projeto segue em linhas gerais o descrito na configuração do processo determ
 
 O próprio [OpenUP/Basic](http://ndpsoftware.com/OpenUpBasic/) se define como "um processo iterativo de desenvolvimento software que é mínimo, completo e extensível". 
 
-Esse subset tem como objetivo simplificar o conjunto de artefatos, funções, atividades e guias presentes no OpenUp para uma abordagem ágil do framework.
+Esse subset tem como objetivo simplificar o conjunto de artefatos, funções, atividades e guias presentes no OpenUp para uma abordagem ágil do framework OpenUP.
 
 ## 2 - Ciclo de Vida
 

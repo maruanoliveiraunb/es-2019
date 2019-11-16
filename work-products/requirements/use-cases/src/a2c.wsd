@@ -1,11 +1,21 @@
-@startuml Entidade Carona
+@startuml Sistema
 left to right direction
 actor motorista
 actor passageiro
 actor sistema
 
+rectangle Pagamento {
+    (Cadastrar/Excluir método de pagamento) -- sistema
+
+    passageiro -- (Realizar Pagamento)
+    passageiro -- (Consultar Transações)
+
+    (Habilitar/Desabilitar método de pagamento) -- motorista
+    (Consultar Transações) -- motorista
+}
+
 rectangle Veículo {
-    (Validar veículo) -- sistema
+    sistema -- (Validar veículo)
     motorista -- (Cadastrar veículo)
     motorista -- (Editar veículo)
     motorista -- (Deletar Veiculo)
