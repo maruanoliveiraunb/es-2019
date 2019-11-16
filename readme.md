@@ -16,13 +16,13 @@ Projeto de Engenharia de Software para o desenvolvimento de um aplicativo de car
 
 Vamos utilizar o Github como plataforma de hospedagem com controle de versão usando o Git.
 
-Os integrantes do grupo precisam estar listados como colaboradores do projeto na plataforma para ter permissão de realizar "push" no repositório.
+Os integrantes do grupo precisam estar listados como colaboradores do projeto na plataforma para ter permissão de realizar "push" e "merge" no repositório.
 
 Cada "push" precisa ser enviado através de uma "branch", e após aprovação dos outros membros é autorizado a realização do "merge" na "master" do projeto.
 
 Com isso, garantimos uma integridade e evolução constante aos artefatos do projeto.
 
-Obs.: Adotamos a utilização de arquivos .md (markdown) para a criação de artefatos textuais. Essa abordagem vai permitir a evolução constante de cada artefato e objetividade no compartilhamento de novas modificações em arquivos. O que não ocorreria em arquivos de editores de texto comuns como Word (Microsoft Office) ou Writer (Libre Office).
+Adotamos a utilização de arquivos .md (markdown) para a criação de artefatos textuais. Essa abordagem vai permitir a evolução constante de cada artefato e objetividade no compartilhamento de novas modificações em arquivos. O mesmo não ocorreria em arquivos de editores de texto comuns como Word (Microsoft Office) ou Writer (Libre Office).
 
 ## 3 - Descrição do Processo de teste adotado
 
@@ -32,4 +32,5 @@ Essa abordagem vai permitir o crescimento do software de forma mais consistente.
 
 ## 4 - Links e Bibliografia
 
-* [OpenUp/Basic](http://ndpsoftware.com/OpenUpBasic/)
+* [OpenUP](http://eclipse.org/epf/downloads/configurations/pubconfig_downloads.php)
+* [OpenUP/Basic](http://ndpsoftware.com/OpenUpBasic/)

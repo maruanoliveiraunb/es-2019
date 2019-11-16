@@ -44,14 +44,6 @@ Template de Origem: OpenUp/Basic -> Work Products -> Project Management -> [Iter
 
 ## 3 - Atribuição dos Itens de Trabalho
 
-<tr>
-        <td>Início</td>
-        <td>01</td>
-        <td>T01 - Definir principais marcos e objetivos do projeto</td>
-        <td>10/10/2019</br>28/10/2019</td>
-        <td>18 dias</td>
-    </tr>
-
 <table>
     <tr>
         <th>Nome / Descrição</th>
@@ -75,49 +67,35 @@ Template de Origem: OpenUp/Basic -> Work Products -> Project Management -> [Iter
         <td>40</td>
     </tr>
     <tr>
-        <td>T02 (2.1) - Análise de aplicativos concorrentes</td>
+        <td>T02 (2.2) - Análise de aplicativos concorrentes</td>
         <td>2</td>
         <td>4</td>
         <td>Eduardo, Luan, Maruan</td>
         <td>8</td>
     </tr>   
     <tr>
-        <td>T03 (3.1) - Criar casos de uso das principais funcionalidades</td>
+        <td>T03 - Criar casos de uso das principais funcionalidades</td>
         <td>1</td>
         <td>20</td>
         <td>Eduardo, Luan, Maruan</td>
         <td>40</td>
     </tr>
     <tr>
-        <td>T04 (4.1) - Levantar a necessidade de realização de protótipos</td>
+        <td>T04 (4.1) - Definir padrão de arquiterutura de desenvolvimento a ser adotado</td>
         <td>1</td>
         <td>4</td>
         <td>Eduardo, Luan, Maruan</td>
         <td>8</td>
     </tr>
     <tr>
-        <td>T04 (4.2) - Desenvolver protótipos relevantes</td>
-        <td>1</td>
-        <td>10</td>
-        <td>Eduardo, Luan, Maruan</td>
-        <td>20</td>
-    </tr>
-    <tr>
-        <td>T05 (5.1) - Definir padrão de arquiterutura de desenvolvimento a ser adotado</td>
-        <td>1</td>
-        <td>4</td>
-        <td>Eduardo, Luan, Maruan</td>
-        <td>8</td>
-    </tr>
-    <tr>
-        <td>T05 (5.2) - Implementar arquitetura base do projeto</td>
+        <td>T04 (4.2) - Implementar arquitetura base do projeto</td>
         <td>1</td>
         <td>25</td>
         <td>Eduardo, Luan, Maruan</td>
         <td>50</td>
     </tr>
     <tr>
-        <td>T06 (5.3) - Implementar testes dos principais casos de uso</td>
+        <td>T05 - Implementar testes dos principais casos de uso</td>
         <td>1</td>
         <td>20</td>
         <td>Eduardo, Luan, Maruan</td>
@@ -126,7 +104,6 @@ Template de Origem: OpenUp/Basic -> Work Products -> Project Management -> [Iter
 </table>
 
 ## 4 - Critério de Avaliação
-* Cada caso de uso precisa ter pelo menos um teste associado
 * Arquitetura criada precisa permitir um crescimento evolutivo do projeto
-* Artefatos de documentação gerados precisam ter uma versão .md e uma versão pdf
+* Artefatos de documentação gerados precisam ter uma versão .md para versionamento e uma versão pdf para distribuição
 * Projeto precisa gerar um build funcional do aplicativo para apresentar estrutura básica

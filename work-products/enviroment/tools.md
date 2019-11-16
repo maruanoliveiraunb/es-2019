@@ -1,22 +1,23 @@
 # Lista de Ferramentas
 
-Abaixo listamos as ferramentas utilizadas no projeto
+Informações de Origem: OpenUP -> Work Products -> Environment -> Tools
 
-# Documentação
-* VSCode (desenvolvimento da documentação - arquivos .md)
-* PlantUML (plugin para VSCode para criar diagramas via código)
-* WebStorm (deseennvolvimento da documentação - arquivos .md)
+Abaixo listamos as ferramentas utilizadas no projeto. Foram priorizadas para o projeto ferramentas **Open Source** e/ou **Gratuitas** de grande impacto na comunidade internacional.
+
+## Documentação
+
+* Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS;
+* PlantUML é uma ferramenta de código aberto que permite aos usuários criar diagramas UML a partir de uma linguagem de texto simples.
 
 ## Desenvolvimento
 
-* IntelliJ (desenvolvimento Java com Play Framework para o Backend)
-* WebStorm (Desenvolvimento com React Native para os Aplicativos)
-* PostgreSQL (banco de dados opensource)
+* Eclipse: Eclipse é um IDE para desenvolvimento Java feito em Java e segue o modelo open source de desenvolvimento de software;
+* PostgreSQL é um sistema gerenciador de banco de dados objeto relacional (SGBDOR), desenvolvido como projeto de código aberto.
 
 ## Versionamento
 
-* Github (hospedagem de código-fonte e versionamento do projeto)
+* Github é uma plataforma de hospedagem de código-fonte com controle de versão usando o Git
 
-## Comunicação
+## Comunicação da equipe
 
-* Whatsapp (comunicação interna do grupo)
+* WhatsApp é um aplicativo multiplataforma de mensagens instantâneas e chamadas de voz para smartphones.
