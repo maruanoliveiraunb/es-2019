@@ -1,12 +1,13 @@
 # Plano de Projeto
 
-Template de Origem: OpenUp/Basic -> Work Products -> Project Management -> [Project Plan](http://ndpsoftware.com/OpenUpBasic/openup_basic/guidances/templates/resources/project_plan.dot)
+Template de Origem: OpenUP/Basic -> Work Products -> Project Management -> [Project Plan](http://ndpsoftware.com/OpenUpBasic/openup_basic/guidances/templates/resources/project_plan.dot)
 
 ## 1 - Introdução
+
 Este plano cobre o conteúdo e desenvolvimento geral do projeto proposto.
 
 ## 2 - Organização do Projeto
-See also: www.eclipse.org/epf/
+
 O trabalho está dividido em áreas de conhecimento. Com uma equipe reduzida, cada área de conhecimento terá a atuação de todos os integrantes, mas teremos a presença de um líder. É de responsabilidade do líder de cada área de conhecimento, além de colaborar com o trabalho na área, organizar e priorizar os trabalhos dos outros integrantes.
 
 O projeto está dividido nas seguintes áreas de conhecimento:
@@ -22,7 +23,7 @@ O projeto está dividido nas seguintes áreas de conhecimento:
 
 O progresso do projeto será monitorado usando dois artefatos de acompanhamento (Backlog do projeto e Backlog de Iteração). Esses artefatos serão unidos à um sistema de pontuação (1 ponto equivale a 2 horas de trabalho), e para cada caso de uso precisará ser estimado uma pontuação.
 
-* Backlog do Projeto (): Apresenta um panorama geral do trabalho que está feito e o que ainda precisa ser realizado.
+* Backlog do Projeto: Apresenta um panorama geral do trabalho que está feito e o que ainda precisa ser realizado.
 * Backlog de Iteração: Apresenta um panorama dos trabalhos realizados e que ainda precisam ser feitos na iteração atual.
 
 ## 4 - Marcos Históricos do Projeto e Objetivos
@@ -61,13 +62,6 @@ Esta seção é reservada para apresentar os objetivos do projeto inteiro.
         <td>T03 - Desenvolver principais casos de uso</td>
         <td>21/10/2019</br>04/11/2019</td>
         <td>14 dias</td>
-    </tr>
-    <tr>
-        <td>Elaboração</td>
-        <td>01</td>
-        <td>T04 - Desenvolver protótipos relevantes</td>
-        <td>28/11/2019</br>04/11/2019</td>
-        <td>7 dias</td>
     </tr>
     <tr>
         <td>Elaboração</td>

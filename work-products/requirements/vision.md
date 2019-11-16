@@ -4,7 +4,7 @@ Template de Origem: OpenUp/Basic -> Work Products -> Requirements -> [Vision](ht
 
 ## 1 - Introdução
 
-Esta introdução fornece uma visão geral de todo o documento de visão. Ela inclui o propósito, escopo, definições, acrônimos, abreviações, referências e visão geral de todo o documento.
+Esta introdução fornece uma visão geral de todo o documento de visão. Ela inclui o propósito, escopo, definições, referências e visão geral de todo o documento.
 
 ### 1.1 Propósito
 
@@ -104,6 +104,8 @@ O aplicativo é destinado aos sistemas operacionais voltados aos sistemas operac
 
 Também é estritamente necessário a presença de internet nos dispositivos móveis, pois toda a comunicação entre os atores (motoristas e passageiros) é feita pelo aplicativo online com a internet. O produto não engloba soluções voltadas para interações offline.
 
+Do ponto de vista da oferta do serviço, os usuários podem fazer uso do aplicativo 24 horas por dia, 7 dias por semana. Dessa forma, precisamos de servidores de alto desempenho (armazenamento e processamento), acesso contínuo e initerrupto à internet e sala de servidores ou utilização de locação de dispositivos em nuvem.
+
 ### 4.3 - Resumo das Capacidades
 
 <table>
@@ -131,14 +133,6 @@ Também é estritamente necessário a presença de internet nos dispositivos mó
 
 **BlaBlaCar**
 
-Concorrente direto com diversas funcionalidades similares. (Fazer SWOT)
+Concorrente direto com diversas funcionalidades similares. Permite a motoristas dar caronas à pessoas interessadas. Todo o contato e negociação é feito via aplicativo. Como já está há algum tempo no mercado global, já possui uma boa base de usuários e tempo de maturação do software.
 Mas apesar disso, como a empresa é estrangeira e sua base de usuários ainda é pequena, eles não possuem uma forma segura de realizar pagamentos.
 Outro problema do Blablacar é a sua verificação de segurança do perfil de cada usuário do sistema. Essa verificação é baseada apenas no perfil do facebook do usuário. Que, mesmo com histórico dentro da plataforma, esse histórico pode ser montado com o tempo pelo próprio usuário mal-intencionado.
-
-## 5 - Outros Requisitos do Produto
-
-[At a high level, list applicable standards, hardware, or platform requirements; performance requirements; and environmental requirements.
-Define the quality ranges for performance, robustness, fault tolerance, usability, and similar characteristics that are not captured in the Feature Set.
-Note any design constraints, external constraints, or other dependencies.
-Define any specific documentation requirements, including user manuals, online help, installation, labeling, and packaging requirements.
-Define the priority of these other product requirements. Include, if useful, attributes such as stability, benefit, effort, and risk.]

@@ -1,5 +1,7 @@
 # Descrição de Processo Definido para o Projeto
 
+Template de Origem: OpenUP -> Work Products -> Environment -> Project Defined Process
+
 ## 1 - Introdução
 
 ### 1.1 - Propósito
@@ -40,15 +42,32 @@ Assim, as fases e os marcos serão os seguintes:
 
 O projeto, devido ao seu tamanho e tempo de vida, possui várias diferenças nos artefatos a serem desenvolvidos.
 
-Adicionamos os artefatos "Project Defined Process" e "Tools" categorizados como "Enviroment" no processo original OpenUP, que havia sido removido do OpenUp/Basic.
+Adicionamos os seguintes artefatos do processo original OpenUP, que havia sido removidos pelo OpenUP/Basic:
 
-Devido ao tempo de vida do projeto que é muito curto, foi necessária a retirada de diversos artefatos listados pelo OpenUP/Basic:
+**Enviroment**
+* Project Defined Process
+* Tools
 
-[Descrever variações escolhidas do OpenUP/Basic]
+**Architecture**
+* Architecture Notebook
+
+Devido aos riscos e tempo de vida do projeto, removemos alguns artefatos presentes no OpenUP/Basic:
+
+**Architecture**
+* Architectural Proof-of-Concept
+
+**Project Management**
+* Status Assessment
+* Risk List
+
+**Requirements**
+* Actor
+* Glossary
+* Supporting Requirements
 
 ## 4 - Papéis
 
-Com uma equipe reduzida, foi necessário reduzir os papéis existentes no OpenUP/Basic para apenas os seguintes:
+Com uma equipe reduzida, foi necessário reduzir os papéis existentes no OpenUP/Basic para apenas os seguintes dentro das áreas de conhecimento Gerenciamento de Projetos, Requisitos, Desenvolvimento, Arquitetura e Testes:
 
 * Analista
 * Arquiteto
@@ -57,8 +76,4 @@ Com uma equipe reduzida, foi necessário reduzir os papéis existentes no OpenUP
 * Testador
 * Stakeholder
 
-Todos os membros da equipe deverão estar executar todos os papéis. Para cada papel haverá a designação de um líder, que será o responsável principal por executar o papel designado, além de organizar os trabalhos realizados naquele papel pelos outros integrantes.
-
-## 5 - Guias e Procedimento Específicos do Projeto
-
-[Listar procedimentos específicos caso existam]
+Presando pelo compatilhamento de conhecimento e experiências, todos os membros da equipe deverão executar todos os papéis. Para cada papel haverá a designação de um líder, que será o responsável principal por executar o papel designado, além de organizar os trabalhos realizados naquele papel pelos outros integrantes.
