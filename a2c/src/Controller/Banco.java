@@ -1,18 +1,18 @@
-package A2C;
+package Controller;
 
 import java.sql.Date;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.UUID;
 
-import Modelos.Carona;
-import Modelos.Esquecimento;
-import Modelos.MetodoPagamento;
-import Modelos.Pagamento;
-import Modelos.Pedido;
+import Model.Carona;
+import Model.Esquecimento;
+import Model.MetodoPagamento;
+import Model.Pagamento;
+import Model.Pedido;
+import Model.Usuario;
 
 import java.text.SimpleDateFormat;
-import Modelos.Usuario;
 
 public class Banco {
 

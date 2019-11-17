@@ -1,6 +1,6 @@
 package SmokeTest;
 
-import A2C.Banco;
+import Controller.Banco;
 
 public class ST1 {
 
@@ -17,3 +17,17 @@ public class ST1 {
 
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

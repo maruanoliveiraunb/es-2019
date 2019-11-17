@@ -1,13 +1,17 @@
-package A2C;
+package View;
 
 import java.util.Scanner;
 
-import Modelos.Carona;
-import Modelos.MetodoPagamento;
-import Modelos.Pedido;
+import Controller.Banco;
+import Controller.Resposta;
+import Model.Carona;
+import Model.MetodoPagamento;
+import Model.Pedido;
 
 public class MenuUsuario {
 
+	// TODO Migrar para Banco Relacional
+	
 	private Banco BancoC;
 	public boolean Executando = true;
 	private int uid = 0;
@@ -55,9 +59,8 @@ public class MenuUsuario {
 
 		Scanner sc = new Scanner(System.in);
 		String opcao = sc.nextLine();
-		opcao = opcao.toLowerCase();
-
-		switch (opcao) {
+		
+		switch (opcao.toLowerCase()) {
 		case "ccc":
 			carona_criar();
 			break;
