@@ -77,7 +77,7 @@ int LUANFREITAS_ID = BancoC.usuario_obteridPorUsuario("luanfreitas");
 		System.out.println(" ---------------- ---------------- ---------------------------------");
 ### Telas dos testes
 
-<images/prints/00.png>
+!<images/prints/00.png>
 		
 ## Resultados esperados
 
