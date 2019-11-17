@@ -6,4 +6,11 @@
 <p> Segundo Sommerville , Engenharia de Software, 9ª edição, página 175, os testes tem dois objetivos distintos. O primeiro é demonstrar ao desenvolvedor e ao cliente que o software atende a seus requisitos. O segundo é descobrir situações em que o software se comporta de maneira indesejável.  Deve ser lembrado que os teste só demonstram a presença de erros não a sua ausência. Assim, os testes mitigam a possibilidade do software não funcionar corretamente, uma vez que não é possível eliminar esse risco. </p>
 
 ## Teste escolhido
-Utilizamos o Smoke test que é conjunto de testes automatizados, sendo mais céleres que os usuais, com o intuito de validar se os pontos principais da aplicação continuam funcionando após as alterações.
+Utilizamos o Smoke test que é conjunto de testes automatizados, sendo mais céleres que os usuais, com o intuito de validar se os pontos principais da aplicação continuam funcionando após as alterações.</p>
+
+## Pontos testados
+
+Os seguintes pontos foram testados no software: 
+Cadastro de usuários;
+Cadastro de motorista;
+
