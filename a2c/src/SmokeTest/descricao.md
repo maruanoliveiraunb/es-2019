@@ -12,13 +12,13 @@ Utilizamos o Smoke test que é conjunto de testes automatizados, sendo mais cél
 
 Os seguintes pontos foram testados no software: </p>
 Teste para adicionar usuários; </p>
-Teste para adicinar caronas compartilhadas;</p>
+Teste para adicionar caronas compartilhadas;</p>
 Teste para solicitar caronas compartilhadas;</p>
 Teste para cadastrar métodos de pagamentos; </p>
 
 ## Testes efetuados
 
-Foram feitos testes unitários previamente determinados, a seguir o código fonte</p>
+Foram feitos testes unitários previamente determinados, nos pontos testados, a seguir o código fonte de um teste unitário para adicionar caronas compartilhadas:</p>
 
 
 int LUANFREITAS_ID = BancoC.usuario_obteridPorUsuario("luanfreitas");
