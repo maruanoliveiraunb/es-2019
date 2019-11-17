@@ -11,6 +11,9 @@ Utilizamos o Smoke test que é conjunto de testes automatizados, sendo mais cél
 ## Pontos testados
 
 Os seguintes pontos foram testados no software: </p>
-Cadastro de usuários;
-Cadastro de motorista;
+Teste para adicionar usuários; </p>
+Teste para adicinar caronas compartilhadas;</p>
+Teste para solicitar caronas compartilhadas;</p>
+Teste para cadastrar métodos de pagamentos; </p>
+
 
