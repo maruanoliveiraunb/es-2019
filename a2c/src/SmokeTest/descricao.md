@@ -10,7 +10,7 @@ Utilizamos o Smoke test que é conjunto de testes automatizados, sendo mais cél
 
 ## Pontos testados
 
-Os seguintes pontos foram testados no software: 
+Os seguintes pontos foram testados no software: </p>
 Cadastro de usuários;
 Cadastro de motorista;
 
