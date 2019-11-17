@@ -79,3 +79,5 @@ int LUANFREITAS_ID = BancoC.usuario_obteridPorUsuario("luanfreitas");
 		
 ## Resultados esperados
 
+Os resultados foram de acordo com os requisitos do sistema. Assim, nessa fase inicial não foram necessárias intervenções e correções para a continuidade do projeto.
+
