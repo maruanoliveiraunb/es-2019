@@ -75,4 +75,7 @@ int LUANFREITAS_ID = BancoC.usuario_obteridPorUsuario("luanfreitas");
 				.caronas_criar(LAFETA_ID, origem, "Águas Claras", "21/11/19 20:30", 4, "Opala 1964",13).getFrase());
 
 		System.out.println(" ---------------- ---------------- ---------------------------------");
+		
+		
+## Resultados esperados
 
