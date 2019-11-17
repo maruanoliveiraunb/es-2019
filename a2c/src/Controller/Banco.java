@@ -16,6 +16,8 @@ import java.text.SimpleDateFormat;
 
 public class Banco {
 
+	// TODO mudar para MySQL
+	
 	public ArrayList<Usuario> Usuarios = new ArrayList<Usuario>();
 	public ArrayList<Esquecimento> Esquecimentos = new ArrayList<Esquecimento>();
 	public ArrayList<Carona> Caronas = new ArrayList<Carona>();
