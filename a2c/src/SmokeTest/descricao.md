@@ -78,7 +78,11 @@ int LUANFREITAS_ID = BancoC.usuario_obteridPorUsuario("luanfreitas");
 ### Telas dos testes
 Inicio dos testes podemos observar na tela abaixo: </p>
 ![Tela 1](https://github.com/maruanoliveiraunb/es-2019/blob/master/images/prints/00.png) </p>
+
+Os elementos que serão testados: </p>
 ![Tela 2](https://github.com/maruanoliveiraunb/es-2019/blob/master/images/prints/07.png) </p>
+
+O resultado dos testes: </p>
 ![Tela 3](https://github.com/maruanoliveiraunb/es-2019/blob/master/images/prints/12.png)
 
 		
