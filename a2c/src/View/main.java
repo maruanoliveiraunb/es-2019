@@ -1,5 +1,6 @@
-package A2C;
+package View;
 
+import Controller.Banco;
 import SmokeTest.Smoker;
 
 public class main {

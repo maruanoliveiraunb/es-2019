@@ -1,4 +1,4 @@
-package A2C;
+package Controller;
 
 public class Resposta {
 

@@ -1,4 +1,4 @@
-package Modelos;
+package Model;
 
 
 public class Esquecimento {

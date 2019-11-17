@@ -1,6 +1,9 @@
-package A2C;
+package View;
 
 import java.util.Scanner;
+
+import Controller.Banco;
+import Controller.Resposta;
 
 public class MenuGeral {
 
@@ -35,9 +38,8 @@ public class MenuGeral {
 
 		Scanner sc = new Scanner(System.in);
 		String opcao = sc.nextLine();
-		opcao = opcao.toLowerCase();
-
-		switch (opcao) {
+		
+		switch (opcao.toLowerCase()) {
 		case "uc":
 			usuario_criar();
 			break;
