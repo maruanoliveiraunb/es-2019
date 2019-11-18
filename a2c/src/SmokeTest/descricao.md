@@ -18,7 +18,7 @@ Teste para cadastrar métodos de pagamentos; </p>
 
 ## Testes efetuados
 
-Foram feitos testes unitários previamente determinados, nos pontos testados, a seguir o código fonte de um teste unitário para adicionar caronas compartilhadas:</p>
+Foram feitos testes previamente determinados, nos pontos testados, a seguir o código fonte de um teste para adicionar caronas compartilhadas:</p>
 
 
 int LUANFREITAS_ID = BancoC.usuario_obteridPorUsuario("luanfreitas");
